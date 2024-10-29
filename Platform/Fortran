@@ -1,0 +1,13 @@
+set(CMAKE_SYSTEM_NAME Fortran)
+
+set(FORTRAN_BASEPATH "C://msys64//mingw64//bin" CACHE PATH "base path to fortran compiler")
+
+set(CMAKE_Fortran_COMPILER "${FORTRAN_BASEPATH}/gfortran.exe" CACHE PATH "")
+set(CMAKE_Fortran_COMPILER_AR "${FORTRAN_BASEPATH}/gcc-ar.exe" CACHE PATH "")
+set(CMAKE_Fortran_COMPILER_RANLIB "${FORTRAN_BASEPATH}/gcc-ranlib.exe" CACHE PATH "")
+
+set(CMAKE_Fortran_FLAGS ""  CACHE STRING "Fortran base flags")
+set(CMAKE_Fortran_FLAGS_RELEASE "-O3"  CACHE STRING "Fortran release flags" )
+set(CMAKE_Fortran_FLAGS_DEBUG "-g -O0"  CACHE STRING "Fortran debug flags")
+set(CMAKE_Fortran_FLAGS_RELWITHDEBINFO "-g -O2"  CACHE STRING "Fortran release-with-debug-info flags" )
+

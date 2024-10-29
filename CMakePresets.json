@@ -1,0 +1,73 @@
+{
+    "version": 10,
+    "configurePresets": [
+        {
+            "name": "default",
+            "displayName": "Release",
+            "description": "Default build using Ninja generator",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": {
+                    "type": "boolean",
+                    "value": "${sourceDir}/Platform/Fortran"
+                },
+                "FORTRAN_BASEPATH": {
+                    "type": "string",
+                    "value": "C://msys64//mingw64//bin"
+                },
+                "CMAKE_Fortran_FLAGS": {
+                    "type": "string",
+                    "value": ""
+                },
+                "CMAKE_BUILD_TYPE": {
+                    "type": "string",
+                    "value": "Release"
+                }
+            },
+            "toolchainFile": "${sourceDir}/Platform/Fortran",
+            "environment": {
+                "PATH": "C:/msys64/mingw64/bin:$penv{PATH}"
+            }
+        },
+        {
+            "name": "debug",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": {
+                    "type": "string",
+                    "value": "Debug"
+                }
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default",
+            "configurePreset": "default",
+            "configuration": "Release"
+        },
+        {
+            "name": "debug",
+            "configurePreset": "default",
+            "configuration": "debug"
+        }
+    ],
+    "workflowPresets": [
+        {
+            "name": "debug",
+            "description": "",
+            "displayName": "",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "debug"
+                },
+                {
+                    "type": "build",
+                    "name": "debug"
+                }
+            ]
+        }
+    ]
+}

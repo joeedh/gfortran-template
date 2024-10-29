@@ -1,0 +1,13 @@
+[
+    {
+        "name": "mingw64",
+        "compilers": {
+            "Fortran": "C:\\msys64\\mingw64\bin\\gfortran.exe",
+            "C": "C:\\msys64\\mingw64\bin\\gcc.exe",
+            "AR": "C:\\msys64\\mingw64\bin\\gcc-ar.exe",
+            "RANLIB": "C:\\msys64\\mingw64\bin\\gcc-ranlib.exe",
+            "MAKE": "C:\\msys64\\usr\\bin\\make.exe"
+        },
+        "isTrusted": true
+    }
+]
