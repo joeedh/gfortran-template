@@ -1,8 +1,6 @@
 {
-  "cmake.additionalCompilerSearchDirs": ["C:\\msys64\\mingw64\\bin"],
   "cmake.useCMakePresets": "always",
   "cmake.buildDirectory": "${workspaceFolder}/build",
-  "cmake.additionalKits": ["${workspaceFolder}/cmake-tool-kits.json"],
   "cmake.automaticReconfigure": true,
   "cmake.configureOnOpen": false,
   "cmake.configureOnEdit": true

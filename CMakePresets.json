@@ -14,7 +14,7 @@
                 },
                 "FORTRAN_BASEPATH": {
                     "type": "string",
-                    "value": "C://msys64//mingw64//bin"
+                    "value": "C:/msys64/mingw64/bin"
                 },
                 "CMAKE_Fortran_FLAGS": {
                     "type": "string",

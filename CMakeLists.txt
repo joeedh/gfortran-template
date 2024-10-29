@@ -10,8 +10,9 @@ set(CMAKE_NINJA_PROGRAM "${CMAKE_SOURCE_DIR}/extern/${CMAKE_HOST_SYSTEM_NAME}/ni
 endif()
 project(myfortran Fortran)
 
-set(SRC
+# once source file per line
+set(EXAMPLE_SRC
     example.f90
 )
-add_executable(example ${SRC})
+add_executable(example ${EXAMPLE_SRC})
 
